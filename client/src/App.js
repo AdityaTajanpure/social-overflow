@@ -15,6 +15,7 @@ import AddEducation from "./components/profile-forms/AddEducation";
 import PrivateRoute from "./components/routing/PrivateRoute";
 import Posts from "./components/posts/Posts";
 import Post from "./components/post/Post";
+import NotFound from "./components/layout/NotFound";
 
 //* Redux
 import { Provider } from "react-redux";
@@ -38,8 +39,6 @@ function App() {
         <NavBar></NavBar>
         <Routes>
           <Route exact path="/" element={<Landing />} />
-        </Routes>
-        <Routes>
           <Route exact path="/login" element={<Wrapper child={<Login />} />} />
           <Route
             exact
@@ -119,6 +118,7 @@ function App() {
               </PrivateRoute>
             }
           />
+          <Route path="/*" element={<Wrapper child={<NotFound />} />} />
         </Routes>
       </Router>
     </Provider>

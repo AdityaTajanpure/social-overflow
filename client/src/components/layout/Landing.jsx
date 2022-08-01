@@ -1,12 +1,9 @@
 import React from "react";
-import { Link, Navigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 
-const Landing = ({ auth: isAuthenticated }) => {
-  if (isAuthenticated) {
-    return <Navigate to="/dashboard"></Navigate>;
-  }
+const Landing = ({ auth: { user, loading, isAuthenticated } }) => {
   return (
     <section className="landing">
       <div className="dark-overlay">
@@ -17,12 +14,24 @@ const Landing = ({ auth: isAuthenticated }) => {
             other developers
           </p>
           <div className="buttons">
-            <Link to="register" className="btn btn-primary">
-              Sign Up
-            </Link>
-            <Link to="login" className="btn btn-light">
-              Login
-            </Link>
+            {!loading && (
+              <>
+                {isAuthenticated ? (
+                  <Link to="dashboard" className="btn btn-primary">
+                    Dashboard
+                  </Link>
+                ) : (
+                  <>
+                    <Link to="register" className="btn btn-primary">
+                      Sign Up
+                    </Link>
+                    <Link to="login" className="btn btn-light">
+                      Login
+                    </Link>
+                  </>
+                )}
+              </>
+            )}
           </div>
         </div>
       </div>
