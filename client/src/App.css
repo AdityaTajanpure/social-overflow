@@ -410,6 +410,11 @@ button {
 
 .profile-exp {
   grid-area: exp;
+  width: 100%;
+}
+
+.education_description {
+  word-break: break-word;
 }
 
 .profile-edu {

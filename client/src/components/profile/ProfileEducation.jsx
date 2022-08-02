@@ -17,7 +17,7 @@ const ProfileEducation = ({
     <p>
       <strong>Study: </strong> {fieldOfStudy}
     </p>
-    <p>
+    <p className="education_description">
       <strong>Description: </strong> {description}
     </p>
   </>
