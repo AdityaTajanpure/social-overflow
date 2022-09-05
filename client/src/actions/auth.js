@@ -1,4 +1,4 @@
-import axios, { AxiosError } from "axios";
+import axios from "axios";
 import { setAlert } from "./alerts";
 import setAuthToken from "../utils/setAuthToken";
 import {
