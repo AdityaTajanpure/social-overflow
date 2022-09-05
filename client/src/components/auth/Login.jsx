@@ -55,6 +55,12 @@ const Login = ({ loginUser, isAuthenticated }) => {
       </form>
       <p className="my-1">
         Don't have an account? <Link to="/register">Register</Link>
+        <br></br>
+        Login Credentials:
+        <br></br>
+        Email: test@gmail.com
+        <br></br>
+        Pass: test123
       </p>
     </>
   );
