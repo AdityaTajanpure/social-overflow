@@ -1,6 +1,0 @@
-{
-  "mongoURI": "mongodb://adityat:aditya2912@adityacluster-shard-00-00.eftwj.mongodb.net:27017,adityacluster-shard-00-01.eftwj.mongodb.net:27017,adityacluster-shard-00-02.eftwj.mongodb.net:27017/?ssl=true&replicaSet=atlas-46n2yl-shard-0&authSource=admin&retryWrites=true&w=majority",
-  "jwtSecret": "I_AM_ThE_BesT",
-  "githubClientId": "be544d6c8743cd46960f",
-  "githubSecret": "713f68dc62c33bc6b9ab37d978446934b40d6081"
-}
